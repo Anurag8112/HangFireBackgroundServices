@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireBackgroundServices", "HangFireBackgroundServices\HangFireBackgroundServices.csproj", "{6867F813-E22E-4B80-A3BE-9304E05A2ABD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6867F813-E22E-4B80-A3BE-9304E05A2ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6867F813-E22E-4B80-A3BE-9304E05A2ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6867F813-E22E-4B80-A3BE-9304E05A2ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6867F813-E22E-4B80-A3BE-9304E05A2ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46D548A8-7FD4-45AE-B12C-B46B51C74581}
+	EndGlobalSection
+EndGlobal
