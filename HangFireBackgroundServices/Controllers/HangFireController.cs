@@ -17,7 +17,7 @@ namespace HangFireBackgroundServices.Controllers
         [Route("FireAndForget")]
         public IActionResult FireAndForgetJob()
         {
-            var jobId=BackgroundJob.Enqueue(() => SendEmail.SendWelcomeEmail("Welcome To Our App"));
+            var jobId = BackgroundJob.Enqueue(() => SendEmail.SendWelcomeEmail("anu8112@mailinator.com", "Test email", "Hello, this is a test email!"));
             return Ok($"JOB ID: {jobId} Welcome Email Send to the User!");
         }
 
@@ -25,7 +25,7 @@ namespace HangFireBackgroundServices.Controllers
         [Route("DelayedJob")]
         public IActionResult DelayedJob()
         {
-            var jobId = BackgroundJob.Schedule(() => SendEmail.SendWelcomeEmail("This Message is from DelayedJob API"),TimeSpan.FromMinutes(1));
+            var jobId = BackgroundJob.Schedule(() => SendEmail.SendWelcomeEmail("anu8112@mailinator.com", "Test email", "Hello, this is a test email!"), TimeSpan.FromMinutes(10));
             return Ok($"JOB ID: {jobId} Discount Email Send to the User!");
         }
 
@@ -41,7 +41,7 @@ namespace HangFireBackgroundServices.Controllers
         [Route("ContinuousJob")]
         public IActionResult ContinuousJob()
         {
-            var ParentJobId= BackgroundJob.Schedule(() => SendEmail.SendWelcomeEmail("Unsubscribe Confirmation Email Sent"), TimeSpan.FromMinutes(1));
+            var ParentJobId= BackgroundJob.Schedule(() => SendEmail.SendWelcomeEmail("anu8112@mailinator.com", "Test email", "Hello, this is a test email!"), TimeSpan.FromMinutes(10));
             BackgroundJob.ContinueJobWith(ParentJobId, () => Console.WriteLine("You were Unsubscribed"));
 
             return Ok($"Continuous Job Created with ParentJobId : {ParentJobId}");
